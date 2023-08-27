@@ -1,0 +1,13 @@
+export default async function Read(props: any) {
+  const response = await fetch(
+    process.env.NEXT_PUBLIC_API_URL + `topics/${props.params.id}`,
+    { cache: "no-cache" }
+  );
+  const topic = await response.json();
+  return (
+    <>
+      <h2>{topic.title}</h2>
+      {topic.body}
+    </>
+  );
+}
