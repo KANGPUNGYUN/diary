@@ -28,13 +28,13 @@ export default function Create() {
       }}
     >
       <p>
-        <input type="text" name="title" id="title" />
+        <input type="text" name="title" id="title" placeholder="제목" />
       </p>
       <p>
-        <textarea name="body" placeholder="body"></textarea>
+        <textarea name="body" placeholder="내용"></textarea>
       </p>
       <p>
-        <input type="submit" value="create" />
+        <input type="submit" value="작성" />
       </p>
     </form>
   );

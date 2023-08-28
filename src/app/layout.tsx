@@ -4,8 +4,24 @@ import Link from "next/link";
 import { Control } from "./Control";
 
 export const metadata: Metadata = {
-  title: "My Diary",
+  title: "Home | 하루쓰기",
   description: "How was your day?",
+  icons: [
+    {
+      rel: "icon",
+      url: "/favicon-32x32.png",
+      type: "image/png",
+      sizes: "32x32",
+    },
+    {
+      rel: "icon",
+      url: "/favicon-16x16.png",
+      type: "image/png",
+      sizes: "16x16",
+    },
+    { rel: "apple-touch-icon", url: "/apple-touch-icon.png", sizes: "180x180" },
+  ],
+  manifest: "/site.webmanifest",
 };
 
 export default async function RootLayout({
@@ -22,7 +38,7 @@ export default async function RootLayout({
     <html>
       <body>
         <h1>
-          <Link href="/">HOME</Link>
+          <Link href="/">하루쓰기</Link>
         </h1>
         <ol>
           {topics.map((topic: any) => {
